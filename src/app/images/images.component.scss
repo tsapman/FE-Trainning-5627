@@ -1,21 +1,24 @@
 .photos-container {
   display: flex;
-  overflow-x: auto;
-  gap: 16px;
-  padding: 8px;
+  flex-wrap: nowrap; /* Prevent wrapping to keep all cards in the same line */
+  gap: 24px; /* Space between cards */
+  justify-content: flex-start; /* Align cards to the left */
+  align-items: stretch; /* Ensure all cards have the same height */
+  overflow-x: auto; /* Add horizontal scrolling if cards exceed the container width */
+  padding: 16px; /* Add padding around the container */
 }
 
 .imageContainer {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: 390px; /* Increased width for the cards */
   text-align: center;
 }
 
 .imageContainer img {
-  width: 300px;
-  height: 300px;
+  width: 390px; /* Match the width of the container */
+  height: 400px; /* Adjust height to maintain proportions */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   object-fit: cover;
@@ -30,5 +33,33 @@
 mat-form-field {
   margin-right: 12px;
 }
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out content evenly */
+  height: 500px; /* Adjust height to match the new width */
+  width: 100%; /* Ensure the card takes up the full width of its container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visuals */
+  padding: 16px; /* Optional: Add padding inside the card */
+  overflow: hidden; /* Prevent content from overflowing the card */
+}
+
+mat-card-actions {
+  margin-top: auto; /* Push the snackbar button to the bottom */
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  padding-bottom: 16px; /* Add consistent bottom padding */
+}
+
+mat-card-title {
+  font-size: 14px; /* Smaller font size for titles */
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for long titles */
+  margin-bottom: 8px; /* Add spacing below the title */
+  padding: 0 8px; /* Add horizontal padding to prevent overlap */
+}
+
 
 
