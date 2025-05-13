@@ -1,0 +1,33 @@
+.photos-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 8px;
+}
+
+.imageContainer {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  text-align: center;
+}
+
+.imageContainer img {
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.imageContainer h2 {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+mat-form-field {
+  margin-right: 12px;
+}
+

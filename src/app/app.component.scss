@@ -1,0 +1,43 @@
+main {
+  display: flex;
+  flex-direction: column; /* Stack title and photos vertically */
+  gap: 16px; /* Add spacing between title and photos */
+  padding: 8px;
+}
+
+.album-title {
+  font-size: 24px; /* Adjust font size for the title */
+  font-weight: bold; /* Make the title bold */
+  text-align: center; /* Center the title */
+  margin-bottom: 16px; /* Add spacing below the title */
+  color: #333; /* Optional: Set a color for the title */
+}
+
+.photos-container {
+  display: flex; /* Use flexbox to align photos horizontally */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 16px; /* Add spacing between photos */
+  padding: 8px; /* Optional: Add padding for better spacing */
+}
+
+.imageContainer {
+  display: inline-flex; /* Ensure items are inline for horizontal scrolling */
+  flex-direction: column; /* Stack image and title vertically */
+  align-items: center; /* Center align content */
+  width: 300px; /* Set a fixed width for each container */
+  text-align: center; /* Center align text */
+}
+
+.imageContainer img {
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.imageContainer h2 {
+  margin-top: 8px; /* Add spacing between the image and the title */
+  font-size: 16px; /* Adjust font size for the title */
+  color: #333; /* Optional: Set a color for the title */
+}

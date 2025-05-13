@@ -1,0 +1,16 @@
+<div class="photos-container">
+  <div class="imageContainer" *ngFor="let photo of photos">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ photo.title || 'Default Title' }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="photo.url || 'assets/default-image.jpg'" alt="{{ photo.title || 'Default Image' }}" />
+      <mat-card-content>
+        <p> 'No description available.' </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <app-snackbar [photo]="photo"></app-snackbar>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
