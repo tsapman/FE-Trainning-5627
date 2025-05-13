@@ -1,6 +1,17 @@
-# ApiConsumeData5
+# 5627 FE Trainning
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+
+Create an Angular App from the scratch.
+Use Angular Material.
+Use SCSS.
+create a repository in gitHub and use a master branch and other branches
+The App should call a fake API 
+https://jsonplaceholder.typicode.com/photos
+The application should show at the first view with a free layout a list of cards with a picture from the album and a tittle.
+The application should be stateless, should have a service to call the endpoint, a component for the logical manage of the data and comunicate via @Input with a render view component.
+every card shoul trigger and EventEmmiter with a popUp with the message:
+this card with ID:[id] is triggered, this message should have and @Output to pass this Id.
 
 ## Development server
 
