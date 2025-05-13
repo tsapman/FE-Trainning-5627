@@ -1,24 +1,24 @@
 .photos-container {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping to keep all cards in the same line */
-  gap: 24px; /* Space between cards */
-  justify-content: flex-start; /* Align cards to the left */
-  align-items: stretch; /* Ensure all cards have the same height */
-  overflow-x: auto; /* Add horizontal scrolling if cards exceed the container width */
-  padding: 16px; /* Add padding around the container */
+  flex-wrap: nowrap; 
+  gap: 24px; 
+  justify-content: flex-start; 
+  align-items: stretch; 
+  overflow-x: auto; 
+  padding: 16px; 
 }
 
 .imageContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 390px; /* Increased width for the cards */
+  width: 390px; 
   text-align: center;
 }
 
 .imageContainer img {
-  width: 390px; /* Match the width of the container */
-  height: 400px; /* Adjust height to maintain proportions */
+  width: 390px; 
+  height: 400px; 
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   object-fit: cover;
@@ -37,28 +37,28 @@ mat-form-field {
 mat-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Space out content evenly */
-  height: 500px; /* Adjust height to match the new width */
-  width: 100%; /* Ensure the card takes up the full width of its container */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visuals */
-  padding: 16px; /* Optional: Add padding inside the card */
-  overflow: hidden; /* Prevent content from overflowing the card */
+  justify-content: space-between; 
+  height: 500px; 
+  width: 100%; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 16px; 
+  overflow: hidden; 
 }
 
 mat-card-actions {
-  margin-top: auto; /* Push the snackbar button to the bottom */
+  margin-top: auto; 
   display: flex;
-  justify-content: center; /* Center the button horizontally */
-  padding-bottom: 16px; /* Add consistent bottom padding */
+  justify-content: center; 
+  padding-bottom: 16px; 
 }
 
 mat-card-title {
-  font-size: 14px; /* Smaller font size for titles */
-  white-space: nowrap; /* Prevent wrapping */
-  overflow: hidden; /* Hide overflowing text */
-  text-overflow: ellipsis; /* Add ellipsis for long titles */
-  margin-bottom: 8px; /* Add spacing below the title */
-  padding: 0 8px; /* Add horizontal padding to prevent overlap */
+  font-size: 14px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  margin-bottom: 8px; 
+  padding: 0 8px; 
 }
 
 
