@@ -8,7 +8,10 @@
 </div>
 
 <div class="display-container">
-  <app-images [photos]="filteredPhotos"></app-images>
+  <app-images
+    [photos]="filteredPhotos"
+    (clickOnCardEvent)="cardTriggered($event)">
+  </app-images>
 </div>
 <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
 

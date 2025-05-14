@@ -1,4 +1,4 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, Input, Output, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Photos } from '../photos';
 import { DisplayComponent } from '../display/display.component';

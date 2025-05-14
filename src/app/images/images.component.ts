@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Photos } from '../photos';
 import { MatCardModule } from '@angular/material/card'; // Import MatCardModule
 import { SnackbarComponent } from '../snackbar/snackbar.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-images',
@@ -13,4 +14,11 @@ import { SnackbarComponent } from '../snackbar/snackbar.component';
 })
 export class ImagesComponent {
   @Input() photos: Photos[] = [];
+  @Output() clickOnCardEvent = new EventEmitter<string>();
+
+  
+
+  onCardClick(photo : Photos) {
+    this.clickOnCardEvent.emit(`Card with ID ${photo.id} clicked!`);
+  }
 }
