@@ -62,4 +62,7 @@ export class DisplayComponent implements OnInit {
     // Convert the map values to an array
     this.filteredPhotos = Array.from(albumMap.values());
   }
+  ngOnDestroy() : void {
+    
+  }
 }
