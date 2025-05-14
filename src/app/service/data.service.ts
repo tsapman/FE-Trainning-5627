@@ -10,7 +10,7 @@ import { Photos } from '../photos';
 })
 export class DataService {
   photos: Photos[] = [];
-  filter : number = 0;
+  
 
   constructor(private http: HttpClient) { }
 
