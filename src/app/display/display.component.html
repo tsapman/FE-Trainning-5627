@@ -1,10 +1,8 @@
 <div class="buttonsContainer">
-  <button class="btnAll" (click)="showAllPhotos()">ALL</button>
-  <button class="btn1-20" (click)="filterPhotos([1, 20])">Album 1-20</button>
-  <button class="btn21-40" (click)="filterPhotos([21, 40])">Album 21-40</button>
-  <button class="btn41-60" (click)="filterPhotos([41, 60])">Album 41-60</button>
-  <button class="btn61-80" (click)="filterPhotos([61, 80])">Album 61-80</button>
-  <button class="btn81-100" (click)="filterPhotos([81, 100])">Album 81-100</button>
+  <app-top-footer-buttons 
+    [photos]="photos"
+    (clickButtonEvent)="topFooterButtonClicked($event)">
+  </app-top-footer-buttons>
 </div>
 
 <div class="display-container">

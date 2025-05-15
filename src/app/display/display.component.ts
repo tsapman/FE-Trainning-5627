@@ -5,11 +5,12 @@ import { Photos } from '../photos';
 import { ImagesComponent } from '../images/images.component'; 
 import { SnackbarComponent } from '../snackbar/snackbar.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { TopFooterButtonsComponent } from '../top-footer-buttons/top-footer-buttons.component';
 
 @Component({
   selector: 'app-display',
   standalone: true,
-  imports: [CommonModule,ImagesComponent,SnackbarComponent],
+  imports: [CommonModule,ImagesComponent,SnackbarComponent,TopFooterButtonsComponent],
   templateUrl: './display.component.html',
   styleUrls: ['./display.component.scss'],
 })
@@ -24,7 +25,7 @@ export class DisplayComponent implements OnInit {
     this.data_service.getAllPhotos().subscribe({
       next: (photos) => {
         this.photos = photos;
-        this.showAllPhotos();
+        
       },
       error: (error) => {
         this.errorMessage = error;
@@ -33,36 +34,7 @@ export class DisplayComponent implements OnInit {
     });
   }
 
-  filterPhotos(albumIdRange: [number, number]) {
-    const [start, end] = albumIdRange;
-    const albumMap = new Map<number, Photos>();
-
-    
-    this.photos
-      .filter((photo) => photo.albumId >= start && photo.albumId <= end)
-      .forEach((photo) => {
-        if (!albumMap.has(photo.albumId)) {
-          albumMap.set(photo.albumId, photo);
-        }
-      });
-
-    
-    this.filteredPhotos = Array.from(albumMap.values()).slice(0, 20);
-  }
-
-  showAllPhotos() {
-    const albumMap = new Map<number, Photos>();
-
-    
-    this.photos.forEach((photo) => {
-      if (!albumMap.has(photo.albumId)) {
-        albumMap.set(photo.albumId, photo);
-      }
-    });
-
-    
-    this.filteredPhotos = Array.from(albumMap.values());
-  }
+  
   ngOnDestroy() : void {
     
   }
@@ -71,5 +43,9 @@ export class DisplayComponent implements OnInit {
     this.snackBar.open(message, 'Close', { 
       duration: 2000 
     }); 
+  }
+
+  topFooterButtonClicked(photos : Photos[]) {
+    this.filteredPhotos = photos;
   }
 }
