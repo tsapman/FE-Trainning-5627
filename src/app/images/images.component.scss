@@ -1,18 +1,17 @@
 .photos-container {
   display: flex;
-  flex-wrap: nowrap; 
-  gap: 24px; 
+  flex-wrap: wrap; 
+  gap: 120px; 
   justify-content: flex-start; 
-  align-items: stretch; 
-  overflow-x: auto; 
+  align-items: stretch;  
   padding: 16px; 
+  margin-left: 120px;
 }
 
 .image-container {
-  display: inline-block;
-  flex-direction: column;
+  display: flex;
   align-items: center;
-  width: 390px; 
+  width: 420px; 
   text-align: center;
 }
 
@@ -39,7 +38,7 @@ mat-card {
   flex-direction: column;
   justify-content: space-between; 
   height: 500px; 
-  width: 100%; 
+  width: 120%; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   padding: 16px; 
   overflow: hidden; 
@@ -49,15 +48,17 @@ mat-card-actions {
   margin-top: auto; 
   display: flex;
   justify-content: center; 
-  padding-bottom: 16px; 
+  padding-bottom: 12px; 
 }
 
 mat-card-title {
-  font-size: 14px; 
+  font-size: 14px;
+  font-family: serif;
+  font-weight: bold; 
   white-space: nowrap; 
   overflow: hidden; 
   text-overflow: ellipsis;
-  margin-bottom: 8px; 
+  margin-bottom: 4px; 
   padding: 0 8px; 
 }
 
