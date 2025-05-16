@@ -1,16 +1,21 @@
 <div class="photos-container">
-  <div class="imageContainer" *ngFor="let photo of photos">
+  <div class="image-container" *ngFor="let photo of photos">
     <mat-card (click)="onCardClick(photo)" class="card">
       <mat-card-header>
-        <mat-card-title>{{ photo.title || 'Default Title' }}</mat-card-title>
+        <mat-card-title>{{ photo.title || "Default Title" }}</mat-card-title>
       </mat-card-header>
-      <img mat-card-image [src]="photo.url || 'assets/default-image.jpg'" alt=" " />
+      <img
+        mat-card-image
+        [src]="photo.url || 'assets/default-image.jpg'"
+        alt=" "
+      />
       <mat-card-content>
         <hr />
       </mat-card-content>
-      <mat-card-actions class="SnackbarButton">
+      <mat-card-actions class="snackbar-button">
         <app-snackbar [photo]="photo"></app-snackbar>
       </mat-card-actions>
     </mat-card>
   </div>
 </div>
+

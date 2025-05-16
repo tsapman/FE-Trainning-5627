@@ -9,13 +9,14 @@ import { Photos } from '../photos';
   providedIn: 'root'
 })
 export class DataService {
-  photos: Photos[] = [];
+  public photos: Photos[] = [];
+  public photosEndpoint : string = 'https://jsonplaceholder.typicode.com/photos';
   
 
   constructor(private http: HttpClient) { }
 
     getAllPhotos() : Observable<Photos[]>  {
-      return this.http.get<Photos[]>('https://jsonplaceholder.typicode.com/photos');
+      return this.http.get<Photos[]>(this.photosEndpoint);
     }
 
 
