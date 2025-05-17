@@ -3,27 +3,22 @@ mat-form-field {
 }
 
 .btn-container-for-id {
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: nowrap; /* Prevent wrapping to the next line */
-  gap: 12px; /* Add consistent spacing between buttons */
-  overflow-x: auto; /* Add horizontal scrolling if buttons exceed container width */
-  align-items: center; /* Vertically align buttons */
-  justify-content: flex-start; /* Align buttons to the start of the container */
-  margin: 16px 0; /* Add consistent spacing above and below the container */
-  height: auto; /* Remove fixed height to allow dynamic sizing */
+  display: flex; 
+  flex-wrap: nowrap; 
+  gap: 12px; 
+  overflow-x: auto; 
+  align-items: center; 
+  margin: 16px 0; 
+  height: 100%; 
 }
 
 button {
-  height: 40px; /* Set a consistent height for all buttons */
-  line-height: 40px; /* Vertically center text inside buttons */
-  padding: 0 16px; /* Ensure consistent padding */
-  margin: 0; /* Remove any default margins */
-  display: inline-flex; /* Ensure buttons behave like inline-flex items */
-  align-items: center; /* Vertically align content inside buttons */
-  justify-content: center; /* Horizontally center content inside buttons */
-  box-sizing: border-box; /* Include padding and border in height/width calculations */
-  vertical-align: middle; /* Ensure buttons align with the middle of the container */
+  background-color: rgb(121, 183, 185);
+  font-family: serif;
+  font-weight: bold;
+  height: 42px;
+  width: 84px;
+  box-sizing: border-box; 
+  vertical-align: middle; 
+
 }
-
-
-

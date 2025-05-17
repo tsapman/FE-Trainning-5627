@@ -1,4 +1,15 @@
 .top-footer-buttons {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    
+}
+
+.btn {
+    width: auto;
+    height: 42px;
+    background-color: rgb(121, 183, 185);
+    font-weight: bold;
+    font-family: serif;
 }

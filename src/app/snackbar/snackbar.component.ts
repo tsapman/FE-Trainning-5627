@@ -19,7 +19,7 @@ export class SnackbarComponent {
   @Input() photo: Photos | undefined;
   private snackBar = inject(MatSnackBar);
 
-  showSnackbar(message: string, action: string = 'Close', duration: number = 3000): void {
+  showSnackbar(message: string, action: string = 'Close', duration: number = 38000): void {
     this.snackBar.open(message, action, {
       duration: duration,
     });
