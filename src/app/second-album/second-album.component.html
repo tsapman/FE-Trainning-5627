@@ -1,1 +1,17 @@
-<p>second-album works!</p>
+<div class="title-container-first-Album">
+    <h3>Second Album complete</h3>
+</div>
+<div class="main-photo-display-first-album-container" *ngFor="let photo of filteredPhotos">
+    <mat-card class="album-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>{{photo.title || "Default Title"}}  </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="photo.url || 'assets/default-image.jpg'" alt=" " />
+  <mat-card-content>
+    <hr />
+  </mat-card-content>
+  <mat-card-actions>
+    
+  </mat-card-actions>
+</mat-card>
+</div>
