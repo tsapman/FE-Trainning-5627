@@ -16,10 +16,10 @@ import { DisplayfirstTwoAlbumsComponent } from '../displayfirst-two-albums/displ
   styleUrls: ['./display.component.scss'],
 })
 export class DisplayComponent implements OnInit {
-  photos: Photos[] = [];
-  filteredPhotos: Photos[] = []; 
-  errorMessage: string = '';
-  showAllAlbums: boolean = true;
+  public photos: Photos[] = [];
+  public filteredPhotos: Photos[] = []; 
+  public errorMessage: string = '';
+  public showAllAlbums: boolean = true;
 
   constructor(private data_service: DataService, private snackBar : MatSnackBar ) {}
 

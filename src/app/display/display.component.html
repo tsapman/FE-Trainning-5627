@@ -1,26 +1,22 @@
+<div class="btn-for-choosing-display">
+  <button class="btn-first-two-album-or-all-albums" (click)="showAllAlbums = !showAllAlbums">
+    {{ showAllAlbums ? 'Show First Two Albums' : 'Show All Albums' }}
+  </button>
+</div>
 
-<button class="btn-first-two-album-or-all-albums" (click)="showAllAlbums = !showAllAlbums">
-  {{ showAllAlbums ? 'Show First Two Albums' : 'Show All Albums' }}
-</button>
 <div class="show-all-albums-container" *ngIf="showAllAlbums">
   <div class="buttonsContainer">
-  <app-top-footer-buttons 
-    [photos]="photos"
-    (clickButtonEvent)="topFooterButtonClicked($event)">
-  </app-top-footer-buttons>
-</div>
+    <app-top-footer-buttons [photos]="photos" (clickButtonEvent)="topFooterButtonClicked($event)">
+    </app-top-footer-buttons>
+  </div>
 
-<div class="display-container">
-  <app-images
-    [photos]="filteredPhotos"
-    (clickOnCardEvent)="cardTriggered($event)">
-  </app-images>
-</div>
-<div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  <div class="display-container">
+    <app-images [photos]="filteredPhotos" (clickOnCardEvent)="cardTriggered($event)">
+    </app-images>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
 </div>
 
 <div class="show-first-two-album-complete-container" *ngIf="!showAllAlbums">
   <app-displayfirst-two-albums></app-displayfirst-two-albums>
 </div>
-
-
