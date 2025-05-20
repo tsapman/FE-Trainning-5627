@@ -1,0 +1,10 @@
+<div class="btn-for-full-album-container">
+    <a mat-stroked-button [routerLink]="['/firstAlbum',{albumId : 1}]">Show 1st Album complete</a>
+    <a mat-stroked-button [routerLink]="['/secondAlbum',{albumId : 2}]">Show 2nd Album complete</a>
+    
+</div>
+
+<div class="rest-of-the-page-container">
+    <h2>Select above an album to display</h2>
+    <router-outlet></router-outlet>
+</div>

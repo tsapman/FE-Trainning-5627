@@ -1,0 +1,66 @@
+h3 {
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+}
+
+.main-photo-display-first-album-container {
+    background-color: azure;
+}
+
+
+.main-photo-display-parent-first-album-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 120px;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 16px;
+    background-color: rgb(176, 126, 223);
+}
+
+.main-photo-display-first-album-container {
+    display: flex;
+    width: 420px; 
+    align-items: center;
+    background-color: rgb(176, 126, 223);
+    margin-left: 80px;
+}
+
+.main-photo-display-first-album-container img {
+  width: 390px; 
+  height: 400px; 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0);
+  object-fit: cover;
+  background-color: rgb(252, 252, 252);
+}
+
+.mat-btn-show-Id {
+    background-color: rgb(121, 183, 185);
+    font-weight: bold;
+    font-family: serif;
+    width: auto;
+    height: 42px;
+    
+}
+
+mat-card-actions {
+    justify-content: center;
+
+}
+
+.album-card {
+    background-color: rgb(253, 253, 253);
+    height: 420px;
+}
+
+mat-card-title {
+    font-family: serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+

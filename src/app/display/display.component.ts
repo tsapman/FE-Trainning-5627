@@ -6,18 +6,20 @@ import { ImagesComponent } from '../images/images.component';
 import { SnackbarComponent } from '../snackbar/snackbar.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TopFooterButtonsComponent } from '../top-footer-buttons/top-footer-buttons.component';
+import { DisplayfirstTwoAlbumsComponent } from '../displayfirst-two-albums/displayfirst-two-albums.component';
 
 @Component({
   selector: 'app-display',
   standalone: true,
-  imports: [CommonModule,ImagesComponent,SnackbarComponent,TopFooterButtonsComponent],
+  imports: [CommonModule,ImagesComponent,SnackbarComponent,TopFooterButtonsComponent,DisplayfirstTwoAlbumsComponent],
   templateUrl: './display.component.html',
   styleUrls: ['./display.component.scss'],
 })
 export class DisplayComponent implements OnInit {
-  photos: Photos[] = [];
-  filteredPhotos: Photos[] = []; 
-  errorMessage: string = '';
+  public photos: Photos[] = [];
+  public filteredPhotos: Photos[] = []; 
+  public errorMessage: string = '';
+  public showAllAlbums: boolean = true;
 
   constructor(private data_service: DataService, private snackBar : MatSnackBar ) {}
 

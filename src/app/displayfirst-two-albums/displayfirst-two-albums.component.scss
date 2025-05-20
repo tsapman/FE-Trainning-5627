@@ -1,0 +1,25 @@
+a {
+    background-color: rgb(155, 31, 31);
+    width: 180px;
+    height: 52px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.btn-for-full-album-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(121, 183, 185);
+}
+
+.rest-of-the-page-container {
+    background-color: rgb(176, 126, 223);
+    height: 650px;
+}
+
+h2 {
+    font-family: serif;
+    font-weight: bold;
+    text-align: center;
+    
+}
