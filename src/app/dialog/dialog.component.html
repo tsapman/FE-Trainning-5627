@@ -1,9 +1,11 @@
 <div class="dialog-container">
     <div class="close-container">
         <button mat-flat-button class="btn-close-dialog" [mat-dialog-close]="true">
-            close
+            Close
         </button>
     </div>
-    <!-- Your dialog content here -->
+    <div class="dialog-content">
+        <h1>This Photo has Id -> {{showId(data)}}</h1>
+    </div>
 </div>
 

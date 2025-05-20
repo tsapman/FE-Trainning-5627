@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { DataService } from '../service/data.service';
 import { CommonModule } from '@angular/common';
@@ -20,7 +20,7 @@ export class DialogComponent {
   public filteredPhotos : Photos [] = [];
   errorMessage = '';
 
-  constructor(private data_service : DataService) {
+  constructor(private data_service : DataService, @Inject(MAT_DIALOG_DATA) public data: Photos) {
   }
 
   ngOnInit(): void {
@@ -38,5 +38,8 @@ export class DialogComponent {
 
   ngOnDestroy(): void {}
 
+  showId(photo: Photos) {
+    return photo.id;
+  }
   
 }
