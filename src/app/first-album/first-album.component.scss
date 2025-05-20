@@ -34,7 +34,7 @@ h3 {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgb(0, 0, 0);
   object-fit: cover;
-  background-color: rgb(176, 126, 223);
+  background-color: rgb(252, 252, 252);
 }
 
 .mat-btn-show-Id {
@@ -50,5 +50,17 @@ mat-card-actions {
     justify-content: center;
 
 }
+
+.album-card {
+    background-color: rgb(253, 253, 253);
+    height: 420px;
+}
+
+mat-card-title {
+    font-family: serif;
+    font-weight: bold;
+    text-align: center;
+}
+
 
 
