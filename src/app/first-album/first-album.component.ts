@@ -44,7 +44,7 @@ export class FirstAlbumComponent {
   ngOnDestroy(): void {}
 
   openDialogToShowId(photo : Photos): void {
-    this._matDialog.open(DialogComponent, {width : "400px", height : "475px", data: photo} )
+    this._matDialog.open(DialogComponent, {width : "auto", height : "475px", data: photo} )
   }
 
   
