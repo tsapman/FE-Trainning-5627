@@ -5,11 +5,12 @@
   <div class="main-photo-display-first-album-container" *ngFor="let photo of filteredPhotos">
     <mat-card class="album-card" appearance="outlined">
       <mat-card-header>
-        <mat-card-title>{{photo.title || "Default Title"}} </mat-card-title>
+        <mat-card-title class="mat-card-title-container">{{photo.title || "Default Title"}} </mat-card-title>
       </mat-card-header>
       <img mat-card-image class="image-mat" [src]="photo.url || 'assets/default-image.jpg'" alt=" " />
-      <mat-card-content>
-        <hr />
+      
+      <mat-card-content class="mat-card-content">
+        
       </mat-card-content>
       <mat-card-actions>
         <button mat-flat-button  class="mat-btn-show-Id" (click) = "openDialogToShowId(photo)" > Show Id</button>

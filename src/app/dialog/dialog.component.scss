@@ -1,6 +1,6 @@
 .btn-close-dialog {
   background-color: aqua;
-  margin-left: 325px;
+  margin-left: 330px;
   font-family: serif;
 }
 
@@ -8,4 +8,17 @@ h1 {
   text-align: center;
   margin-top: 183px;
   font-family: serif;
+}
+
+
+::ng-deep .close-container {
+  background-color: rgb(175, 174, 174);
+}
+
+.space-under-content-in-dialog {
+  margin-top: -242px;
+  background-color: rgb(7, 107, 74);
+  height: 440px;
+  font-family: serif;
+  color: rgb(5, 5, 5);
 }
