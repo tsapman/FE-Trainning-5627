@@ -12,7 +12,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: stretch;
     padding: 16px;
     background-color: rgb(212, 208, 216);
@@ -54,6 +54,7 @@ mat-card-actions {
 .album-card {
     background-color: rgb(253, 253, 253);
     height: 420px;
+    width: 105%;
 }
 
 .mat-card-title-container {

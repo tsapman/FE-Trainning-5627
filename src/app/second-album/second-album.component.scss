@@ -6,23 +6,26 @@ h3 {
 
 .main-photo-display-first-album-container {
     background-color: azure;
+    display: flex;
 }
 
 
 .main-photo-display-parent-first-album-container {
-    background-color: rgb(176, 126, 223);
+    background-color: rgb(222, 221, 223);
 }
 
 .main-photo-display-first-album-container {
-    background-color: rgb(176, 126, 223);
-    width: 720px;
-    margin-left: 565px;
+    background-color: rgb(222, 221, 223);
+    width: auto;
+    justify-content: space-between;
+    margin-left: 30%;
 }
 
 .album-card {
     height: 420px;
     margin-bottom: 48px;
     margin-top: 48px;
+    width: 40dvw;
 }
 
 .mat-card-title-class-container {
