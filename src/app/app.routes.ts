@@ -3,6 +3,7 @@ import { FirstAlbumComponent } from './first-album/first-album.component';
 import { SecondAlbumComponent } from './second-album/second-album.component';
 
 export const routes: Routes = [
-    {path: 'firstAlbum', component: FirstAlbumComponent},
-    {path: 'secondAlbum', component : SecondAlbumComponent}
+    {path: 'firstAlbum/:albumId', component: FirstAlbumComponent},
+    {path: 'secondAlbum/:albumId', component : SecondAlbumComponent}
+    
 ];
