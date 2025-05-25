@@ -12,7 +12,7 @@ mat-form-field {
   height: 100%; 
 }
 
-button {
+.btn-show-id{
   background-color: rgb(121, 183, 185);
   font-family: serif;
   font-weight: bold;
@@ -20,5 +20,5 @@ button {
   width: 84px;
   box-sizing: border-box; 
   vertical-align: middle; 
-
+  cursor: pointer;
 }
