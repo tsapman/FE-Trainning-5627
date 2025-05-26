@@ -1,19 +1,20 @@
 .photos-container {
   display: flex;
   flex-wrap: wrap; 
-  gap: 120px; 
-  justify-content: flex-start; 
-  align-items: stretch;  
+  justify-content: space-around; 
+  align-items: center;  
   padding: 16px; 
-  background-color: rgb(222, 221, 223);
+  background-color: rgb(212, 208, 216);
 }
 
 .image-container {
+  margin-top: 8vh;
   display: flex;
   align-items: center;
   width: 420px; 
   text-align: center;
   margin-left: 80px;
+  margin-bottom: 9vh;
 }
 
 .image-container img {
@@ -31,11 +32,8 @@
   color: #333;
 }
 
-mat-form-field {
-  margin-right: 12px;
-}
 
-mat-card {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
@@ -46,7 +44,7 @@ mat-card {
   overflow: hidden; 
 }
 
-mat-card-actions {
+.snackbar-button {
   margin-top: auto; 
   display: flex;
   justify-content: center; 
@@ -54,7 +52,7 @@ mat-card-actions {
   box-shadow: #333;
 }
 
-mat-card-title {
+.mat-card-title-container {
   font-size: 14px;
   font-family: serif;
   font-weight: bold; 

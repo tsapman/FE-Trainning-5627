@@ -2,7 +2,7 @@
   <div class="image-container" *ngFor="let photo of photos">
     <mat-card (click)="onCardClick(photo)" class="card">
       <mat-card-header>
-        <mat-card-title>{{ photo.title || "Default Title" }}</mat-card-title>
+        <mat-card-title class="mat-card-title-container">{{ photo.title || "Default Title" }}</mat-card-title>
       </mat-card-header>
       <img
         mat-card-image

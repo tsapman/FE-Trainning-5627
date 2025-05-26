@@ -4,11 +4,12 @@ import { MatCardActions, MatCardContent, MatCardModule } from '@angular/material
 import { Photos } from '../photos';
 import { DataService } from '../service/data.service';
 import { ActivatedRoute } from '@angular/router';
+import { SnackbarComponent } from '../snackbar/snackbar.component';
 
 @Component({
   selector: 'app-second-album',
   standalone: true,
-  imports: [CommonModule,MatCardActions,MatCardContent,MatCardModule],
+  imports: [CommonModule,MatCardActions,MatCardContent,MatCardModule,SnackbarComponent],
   templateUrl: './second-album.component.html',
   styleUrl: './second-album.component.scss'
 })

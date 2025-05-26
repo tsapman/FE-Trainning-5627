@@ -17,9 +17,11 @@ import { ImagesComponent } from '../images/images.component';
 })
 export class SnackbarComponent {
   @Input() photo: Photos | undefined;
+  @Input() viewModeTitle : string = '';
+  public isSecondAlbum : boolean = false;
   private snackBar = inject(MatSnackBar);
 
-  showSnackbar(message: string, action: string = 'Close', duration: number = 38000): void {
+  showSnackbar(message: string, action: string = 'Close', duration: number = 3800): void {
     this.snackBar.open(message, action, {
       duration: duration,
     });
@@ -27,5 +29,17 @@ export class SnackbarComponent {
 
 getImageId() {
   return String(this.photo?.id);
-}
+  }
+isModeViewSecondAlbum(): boolean {
+  if (this.viewModeTitle.includes('Second Album complete')) {
+    this.isSecondAlbum = true;
+    return this.isSecondAlbum;
+  } else {
+    this.isSecondAlbum = false;
+    return this.isSecondAlbum;
+  }
+
+  
+  }
+
 }
