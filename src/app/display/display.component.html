@@ -1,13 +1,12 @@
 <div class="input-album-id-container">
-  <mat-form-field class="input-form-field">
-  <mat-label>Clearable input</mat-label>
-  <input matInput type="text" [(ngModel)]="value">
-  @if (value) {
-    <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-      <mat-icon>close</mat-icon>
-    </button>
-  }
-</mat-form-field>
+  <form class="example-form" (ngSubmit)="onSearchPhotoById()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Search photo by Id</mat-label>
+      <input type="text" matInput placeholder="2" [(ngModel)]="searchPhotoId" name="photoId">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Search</button>
+  </form>
+
 </div>
 
 <div class="btn-for-choosing-display">
