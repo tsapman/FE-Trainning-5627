@@ -1,5 +1,5 @@
 
-<div class="btn-container-for-id">
+<div [ngClass]="isModeViewSecondAlbum() ? 'btn-container-for-id-second-album-view' : 'btn-container-for-id' ">
   
   <button class="btn-show-id" type="button" color="primary"  (click)="showSnackbar('Image Id = ' + getImageId())">
     Show Id 
