@@ -26,7 +26,7 @@ export class DisplayComponent implements OnInit {
   public errorMessage: string = '';
   public showAllAlbums: boolean = true;
   public value: string = 'clear';
-  public searchPhotoId : string = '';
+  public searchPhotoId : number = 0;
   public searchByPhotoIdApplied: boolean = false;
   public searchPhoto : Photos[] = [];
 
@@ -61,13 +61,13 @@ export class DisplayComponent implements OnInit {
   }
 
   onSearchPhotoById(): Photos[] {
-    if (this.searchPhotoId === '') {
+    if (this.searchPhotoId === 0) {
       this.searchByPhotoIdApplied = false;
       this.filteredPhotos = [];
       return this.filteredPhotos;
     } else {
       this.searchByPhotoIdApplied = true;
-      this.filteredPhotos = this.photos.filter(photo => photo.id === Number(this.searchPhotoId));
+      this.filteredPhotos = this.photos.filter(photo => photo.id === this.searchPhotoId);
       return this.filteredPhotos;
     }
     

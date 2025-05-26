@@ -13,3 +13,33 @@
     background-color: rgb(222, 221, 223);
 }
 
+.input-album-id-container {
+    margin-left: 42%;
+    
+}
+
+.search-for-id-btn {
+    font-family: serif;
+    font-weight: bold;
+    height: 4vh;
+    width: 4vw;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    border: 2px black solid;
+}
+
+.mat-label-container {
+    font-family: serif;
+}
+
+.search-for-id-form {
+    height : 12%;
+}
+
+::ng-deep .mat-mdc-raised-button {
+    color: rgb(113, 175, 177);
+}
+
+.input-error-form-container {
+    margin-bottom: 4vh;
+}
