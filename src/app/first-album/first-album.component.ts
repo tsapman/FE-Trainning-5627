@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output , EventEmitter, inject} from '@angular/core';
 import { Photos } from '../photos';
 import { DataService } from '../service/data.service';
 import { ActivatedRoute } from '@angular/router';
@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ImagesComponent } from '../images/images.component';
 import { DialogComponent } from '../dialog/dialog.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-first-album',
@@ -20,6 +21,8 @@ export class FirstAlbumComponent {
   public filteredPhotos: Photos[] = [];
   public errorMessage: string = '';
   public albumIdParam: string = '';
+  private snackBar = inject(MatSnackBar);
+  
 
   constructor(private data_service: DataService, private router: ActivatedRoute, private _matDialog: MatDialog) {
     this.albumIdParam = this.router.snapshot.paramMap.get('albumId') ?? '';
@@ -45,6 +48,10 @@ export class FirstAlbumComponent {
 
   openDialogToShowId(photo : Photos): void {
     this._matDialog.open(DialogComponent, {width : "auto", height : "475px", data: photo} )
+  }
+
+  onCardClick(photo : Photos) {
+    this.snackBar.open(`Photo Id = ${photo.id}`, 'Close',{ duration : 3800});
   }
 
   
