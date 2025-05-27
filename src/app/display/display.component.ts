@@ -25,7 +25,7 @@ export class DisplayComponent implements OnInit {
   public filteredPhotos: Photos[] = []; 
   public errorMessage: string = '';
   public showAllAlbums: boolean = true;
-  public value: string = 'clear';
+  public value: string = 'Search photo by Id';
   public searchPhotoId : number = 0;
   public searchByPhotoIdApplied: boolean = false;
   public searchPhoto : Photos[] = [];

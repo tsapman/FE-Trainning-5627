@@ -1,7 +1,7 @@
 <div class="input-album-id-container">
   <form class="form-input-for-search-by-id" (ngSubmit)="onSearchPhotoById()">
     <mat-form-field class="search-for-id-form">
-      <mat-label class="mat-label-container">Search photo by Id</mat-label>
+      <mat-label class="mat-label-container">{{value}}</mat-label>
       <input type="number" ngModel max="5000" min="1" matInput placeholder="Id range 1-5000" [(ngModel)]="searchPhotoId" name="photoId" (ngModelChange)="searchPhotoId = $event === null || $event === '' ? 0 : $event">
     </mat-form-field>
     <button mat-raised-button class="search-for-id-btn" style="background-color: #79b7b9; color: rgb(0, 0, 0);" type="submit">Search</button>
