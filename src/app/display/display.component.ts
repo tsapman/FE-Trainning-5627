@@ -7,11 +7,16 @@ import { SnackbarComponent } from '../snackbar/snackbar.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TopFooterButtonsComponent } from '../top-footer-buttons/top-footer-buttons.component';
 import { DisplayfirstTwoAlbumsComponent } from '../displayfirst-two-albums/displayfirst-two-albums.component';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { MatFormField, MatFormFieldModule, MatLabel } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-display',
   standalone: true,
-  imports: [CommonModule,ImagesComponent,SnackbarComponent,TopFooterButtonsComponent,DisplayfirstTwoAlbumsComponent],
+  imports: [CommonModule,ImagesComponent,SnackbarComponent,TopFooterButtonsComponent,DisplayfirstTwoAlbumsComponent, MatIcon, FormsModule, MatLabel,MatFormFieldModule,MatInputModule,MatIconModule,MatButtonModule],
   templateUrl: './display.component.html',
   styleUrls: ['./display.component.scss'],
 })
@@ -20,6 +25,9 @@ export class DisplayComponent implements OnInit {
   public filteredPhotos: Photos[] = []; 
   public errorMessage: string = '';
   public showAllAlbums: boolean = true;
+  public value: string = 'Search photo by Id';
+  public searchPhotoId : number = 0;
+  public searchByPhotoIdApplied: boolean = false;
 
   constructor(private data_service: DataService, private snackBar : MatSnackBar ) {}
 
@@ -49,5 +57,18 @@ export class DisplayComponent implements OnInit {
 
   topFooterButtonClicked(photos : Photos[]) {
     this.filteredPhotos = photos;
+  }
+
+  onSearchPhotoById(): Photos[] {
+    if (this.searchPhotoId === 0) {
+      this.searchByPhotoIdApplied = false;
+      this.filteredPhotos = [];
+      return this.filteredPhotos;
+    } else {
+      this.searchByPhotoIdApplied = true;
+      this.filteredPhotos = this.photos.filter(photo => photo.id === this.searchPhotoId);
+      return this.filteredPhotos;
+    }
+    
   }
 }

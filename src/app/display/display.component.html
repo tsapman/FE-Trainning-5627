@@ -1,4 +1,19 @@
-<div class="btn-for-choosing-display">
+<div class="input-album-id-container">
+  <form class="form-input-for-search-by-id" (ngSubmit)="onSearchPhotoById()">
+    <mat-form-field class="search-for-id-form">
+      <mat-label class="mat-label-container">{{value}}</mat-label>
+      <input type="number" ngModel max="5000" min="1" matInput placeholder="Id range 1-5000" [(ngModel)]="searchPhotoId" name="photoId" (ngModelChange)="searchPhotoId = $event === null || $event === '' ? 0 : $event">
+    </mat-form-field>
+    <button mat-raised-button class="search-for-id-btn" style="background-color: #79b7b9; color: rgb(0, 0, 0);" type="submit">Search</button>
+    </form>
+
+    <div class="input-error-form-container" *ngIf="searchPhotoId < 1 || searchPhotoId > 5000">
+      Please enter a valid Photo Id (1-5000).
+    </div>
+    
+</div>
+<div class="show-multiple-photos-view-container" *ngIf="!searchByPhotoIdApplied">
+  <div class="btn-for-choosing-display">
   <button class="btn-first-two-album-or-all-albums" (click)="showAllAlbums = !showAllAlbums">
     {{ showAllAlbums ? 'Show First Two Albums' : 'Show All Albums' }}
   </button>
@@ -19,4 +34,15 @@
 
 <div class="show-first-two-album-complete-container" *ngIf="!showAllAlbums">
   <app-displayfirst-two-albums></app-displayfirst-two-albums>
+</div>
+</div>
+
+<div class="show-search-photo-container" *ngIf="searchByPhotoIdApplied">
+  <div class="show-search-photo-albumId-container">
+    <h2 class = "albumId-searched-photo"> 
+      AlbumId = {{onSearchPhotoById()[0].albumId}}
+    </h2>
+  </div>
+  <app-images [photos]="onSearchPhotoById()" (clickOnCardEvent)="cardTriggered($event)">
+    </app-images>
 </div>
