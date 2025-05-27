@@ -42,6 +42,11 @@
 </div>
 
 <div class="show-search-photo-container" *ngIf="searchByPhotoIdApplied">
+  <div class="show-search-photo-albumId-container">
+    <h2 class = "albumId-searched-photo"> 
+      AlbumId = {{onSearchPhotoById()[0].albumId}}
+    </h2>
+  </div>
   <app-images [photos]="onSearchPhotoById()" (clickOnCardEvent)="cardTriggered($event)">
     </app-images>
 </div>
