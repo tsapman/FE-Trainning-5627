@@ -7,14 +7,10 @@
     <button mat-raised-button class="search-for-id-btn" style="background-color: #79b7b9; color: rgb(0, 0, 0);" type="submit">Search</button>
     </form>
 
-    <div class="input-error-form-container" *ngIf="searchPhotoId < 1">
+    <div class="input-error-form-container" *ngIf="searchPhotoId < 1 || searchPhotoId > 5000">
       Please enter a valid Photo Id (1-5000).
     </div>
-
-    <div class="input-error-form-container" *ngIf="searchPhotoId > 5000">
-      Please enter a valid Photo Id (1-5000).
-    </div>
-
+    
 </div>
 <div class="show-multiple-photos-view-container" *ngIf="!searchByPhotoIdApplied">
   <div class="btn-for-choosing-display">

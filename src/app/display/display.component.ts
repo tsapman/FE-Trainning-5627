@@ -28,7 +28,6 @@ export class DisplayComponent implements OnInit {
   public value: string = 'Search photo by Id';
   public searchPhotoId : number = 0;
   public searchByPhotoIdApplied: boolean = false;
-  public searchPhoto : Photos[] = [];
 
   constructor(private data_service: DataService, private snackBar : MatSnackBar ) {}
 
