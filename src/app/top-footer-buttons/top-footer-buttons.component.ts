@@ -1,11 +1,10 @@
 import { Component, EventEmitter, Output, Input } from '@angular/core';
-import { DisplayComponent } from '../display/display.component';
 import { Photos } from '../photos';
 
 @Component({
   selector: 'app-top-footer-buttons',
   standalone: true,
-  imports: [DisplayComponent],
+  imports: [],
   templateUrl: './top-footer-buttons.component.html',
   styleUrl: './top-footer-buttons.component.scss'
 })
