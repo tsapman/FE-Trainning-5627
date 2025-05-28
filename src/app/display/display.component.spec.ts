@@ -2,7 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DataService } from '../service/data.service';
 import { DisplayComponent } from './display.component';
 import { Photos } from '../photos';
-import { of } from 'rxjs';
+import { of, throwError } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http'; 
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('DisplayComponent', () => {
   let component: DisplayComponent;
@@ -10,7 +12,11 @@ describe('DisplayComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DisplayComponent]
+      imports: [
+        DisplayComponent,
+        HttpClientModule,
+        NoopAnimationsModule
+      ]
     })
     .compileComponents();
 
@@ -41,7 +47,7 @@ describe('DisplayComponent', () => {
     expect(component.filteredPhotos.length).toBe(1);
     expect(component.searchByPhotoIdApplied).toBeTrue();
     expect(component.filteredPhotos[0].id).toBe(1);
-    expect(result).toBeTrue();
+    expect(result.length).toBe(1);
   });
 
   it('should set the filteredPhotos to be empty and searchByPhotoIdApplied to be false when the searchPhotoId is 0', () => {
@@ -49,7 +55,7 @@ describe('DisplayComponent', () => {
     const result = component.onSearchPhotoById();
     expect(component.searchByPhotoIdApplied).toBeFalse();
     expect(component.filteredPhotos.length).toBe(0);
-    expect(result).toBeFalse();
+    expect(result.length).toBe(0);
   });
 
   it('should set filteredPhotos to photos when a topFooterButton is clicked', () => {
@@ -109,7 +115,7 @@ describe('DisplayComponent ngOnit', ()=> {
 
   it('should set errorMessage on fetch failure', () => {
     const error = 'Failed to fetch photos';
-    mockDataService.getAllPhotos.and.returnValue(of({ error }));
+    mockDataService.getAllPhotos.and.returnValue(throwError(() => error));
 
     component.ngOnInit();
     expect(component.errorMessage).toBe(error);

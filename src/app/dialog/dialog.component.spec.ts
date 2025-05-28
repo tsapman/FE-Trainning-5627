@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 
 import { DialogComponent } from './dialog.component';
 import { Photos } from '../photos';
@@ -13,7 +14,17 @@ describe('DialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DialogComponent,CommonModule,MatButtonModule,MatIconModule,MatDialogModule]
+      imports: [
+        DialogComponent,
+        CommonModule,
+        MatButtonModule,
+        MatIconModule,
+        MatDialogModule,
+        HttpClientModule
+      ],
+      providers: [
+        { provide: MAT_DIALOG_DATA, useValue: {} }
+      ]
     })
     .compileComponents();
 

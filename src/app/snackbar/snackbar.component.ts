@@ -5,12 +5,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ImagesComponent } from '../images/images.component';
+
 
 @Component({
   selector: 'app-snackbar',
   standalone: true,
-  imports: [CommonModule, MatFormFieldModule, MatInputModule, MatButtonModule, ImagesComponent],
+  imports: [CommonModule, MatFormFieldModule, MatInputModule, MatButtonModule],
   templateUrl: './snackbar.component.html',
   styleUrl: './snackbar.component.scss'
 })
