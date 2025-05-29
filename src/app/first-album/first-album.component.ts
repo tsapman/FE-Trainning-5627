@@ -5,7 +5,6 @@ import { ActivatedRoute } from '@angular/router';
 import { MatCardActions, MatCardContent, MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { ImagesComponent } from '../images/images.component';
 import { DialogComponent } from '../dialog/dialog.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { DataService } from '../service/data.service';
 import { Photos } from '../photos';
 import { ImagesComponent } from '../images/images.component'; 
-import { SnackbarComponent } from '../snackbar/snackbar.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TopFooterButtonsComponent } from '../top-footer-buttons/top-footer-buttons.component';
 import { DisplayfirstTwoAlbumsComponent } from '../displayfirst-two-albums/displayfirst-two-albums.component';
@@ -16,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-display',
   standalone: true,
-  imports: [CommonModule,ImagesComponent,SnackbarComponent,TopFooterButtonsComponent,DisplayfirstTwoAlbumsComponent, MatIcon, FormsModule, MatLabel,MatFormFieldModule,MatInputModule,MatIconModule,MatButtonModule],
+  imports: [CommonModule,ImagesComponent,TopFooterButtonsComponent,DisplayfirstTwoAlbumsComponent, MatIcon, FormsModule, MatLabel,MatFormFieldModule,MatInputModule,MatIconModule,MatButtonModule],
   templateUrl: './display.component.html',
   styleUrls: ['./display.component.scss'],
 })

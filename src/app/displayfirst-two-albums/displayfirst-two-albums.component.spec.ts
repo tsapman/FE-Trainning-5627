@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
 
 import { DisplayfirstTwoAlbumsComponent } from './displayfirst-two-albums.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('DisplayfirstTwoAlbumsComponent', () => {
   let component: DisplayfirstTwoAlbumsComponent;
@@ -8,7 +10,10 @@ describe('DisplayfirstTwoAlbumsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DisplayfirstTwoAlbumsComponent]
+      imports: [DisplayfirstTwoAlbumsComponent, HttpClientModule],
+      providers: [
+        { provide: ActivatedRoute, useValue: {} }
+      ]
     })
     .compileComponents();
 
