@@ -13,7 +13,7 @@ import { DisplayComponent } from './display/display.component'; // Import Displa
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'apiObtainData';
+  title = 'Album Photo Covers';
   
 }
 
