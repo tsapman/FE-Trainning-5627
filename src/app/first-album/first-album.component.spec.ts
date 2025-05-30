@@ -67,7 +67,7 @@ describe('FirstAlbumComponent', () => {
 
     fixture = TestBed.createComponent(FirstAlbumComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges(); // This will trigger the constructor logic and fill filteredPhotos
+    fixture.detectChanges(); 
   });
 
   it('Set filteredPhotos correctly for the provided albumId', () => {
