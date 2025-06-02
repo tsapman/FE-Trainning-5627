@@ -72,3 +72,9 @@ mat-card-actions {
 .mat-card-content {
     border-bottom: 0.5px solid black;
 }
+
+@media only screen and (max-width: 1540px) {
+    .main-photo-display-first-album-container {
+        width : 400px;
+    }
+}
