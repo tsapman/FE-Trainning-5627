@@ -61,9 +61,9 @@ mat-card-actions {
 }
 
 .mat-card-title-container {
-    font-family: serif;
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
+  font-family: serif;
+  font-weight: bold;
 }
 
 
@@ -71,4 +71,10 @@ mat-card-actions {
 
 .mat-card-content {
     border-bottom: 0.5px solid black;
+}
+
+@media only screen and (max-width: 1540px) {
+    .main-photo-display-first-album-container {
+        width : 400px;
+    }
 }

@@ -3,17 +3,22 @@
 </div>
 <div class="main-photo-display-parent-first-album-container">
   <div class="main-photo-display-first-album-container" *ngFor="let photo of filteredPhotos">
-    <mat-card class="album-card" appearance="outlined" >
+    <mat-card class="album-card" appearance="outlined">
       <mat-card-header>
-        <mat-card-title class="mat-card-title-container">{{photo.title || "Default Title"}} </mat-card-title>
+        <div class="title-holder">
+          <mat-card-title class="mat-card-title-container">{{photo.title || "Default Title"}}
+          </mat-card-title>
+        </div>
+
       </mat-card-header>
-      <img mat-card-image (click)="onCardClick(photo)" class="image-mat" [src]="photo.url || 'assets/default-image.jpg'" alt=" " />
-      
+      <img mat-card-image (click)="onCardClick(photo)" class="image-mat" [src]="photo.url || 'assets/default-image.jpg'"
+        alt=" " />
+
       <mat-card-content class="mat-card-content">
-        
+
       </mat-card-content>
       <mat-card-actions>
-        <button mat-flat-button  class="mat-btn-show-Id" (click) = "openDialogToShowId(photo)" > Show Id</button>
+        <button mat-flat-button class="mat-btn-show-Id" (click)="openDialogToShowId(photo)"> Show Id</button>
       </mat-card-actions>
     </mat-card>
   </div>
