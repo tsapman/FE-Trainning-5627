@@ -42,25 +42,14 @@ h3 {
     }
 
     .main-photo-display-first-album-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
-    padding: 16px;
-    background-color: rgb(212, 208, 216);
-    margin-left: auto ;
+    width: 98vw;
+    margin-left: 0 ;
     
     }
 
     .main-photo-display-parent-first-album-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
-    padding: 16px;
-    background-color: rgb(212, 208, 216);
+    
+    margin-left: 0;
     
     }
 
@@ -101,6 +90,30 @@ h3 {
 
 
 }
+
+@media only screen and (max-width: 1200px) and (min-width: 450px) {
+    .album-card {
+        width: 95dvw;
+        margin-left: 0.5vw;
+    }
+
+    .main-photo-display-first-album-container img {
+         width: 94dvw; 
+    }
+
+    .snackbar-button {
+        margin-left: 6dvw;
+    }
+
+    ::ng-deep .btn-show-id {
+        margin-left: 25vw !important;
+
+    }
+    
+    
+}
+
+ 
     
     
     

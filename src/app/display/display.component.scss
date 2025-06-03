@@ -51,3 +51,16 @@
     font-family: serif;
     text-align: center;
 }
+
+@media only screen and (max-width: 1200px) and (min-width: 450px) {
+    .search-for-id-btn {
+        height: 3vh;
+        margin-bottom: 1.5vh;
+    }
+
+    .btn-first-two-album-or-all-albums {
+        margin-bottom: 1.5vh;
+        
+    }
+
+}
