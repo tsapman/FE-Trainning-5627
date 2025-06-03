@@ -15,3 +15,10 @@
     font-family: serif;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1200px) and (min-width: 450px) {
+    .btn {
+        font-size: large;
+        
+    }
+}
