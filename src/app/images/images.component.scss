@@ -88,3 +88,27 @@
   line-height: 1;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 450px) {
+  .image-container {
+    width: 120vw;
+    margin-left: 0;
+  }
+
+  .title-holder{
+    font-size: large;
+  }
+
+  ::ng-deep .btn-show-id {
+    font-size: large;
+    width: 91px;
+  }
+
+  .photos-container {
+    padding: 0;
+  }
+
+  .image-container {
+    margin-bottom: -2vh;
+  }
+}
+

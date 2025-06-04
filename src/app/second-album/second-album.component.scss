@@ -9,6 +9,11 @@ h3 {
     display: flex;
 }
 
+.mat-card-content-class-container {
+    border-bottom: 0.5px solid black;
+    margin-bottom: 1vh;
+}
+
 
 .main-photo-display-parent-first-album-container {
     background-color: rgb(212, 208, 216);
@@ -19,6 +24,17 @@ h3 {
     width: auto;
     justify-content: space-between;
     margin-left: 30%;
+}
+
+.main-photo-display-first-album-container img {
+  width: 39vw; 
+  height: 150vh; 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0);
+  object-fit: cover;
+  background-color: rgb(252, 252, 252);
+  margin : auto;
+  margin-bottom: 12px;
 }
 
 .album-card {
@@ -35,32 +51,21 @@ h3 {
 }
 
 
-@media only screen and (max-width: 1580px) {
+@media only screen and (max-width: 1380px) {
     .album-card {
         width : 25dvw;
         
     }
 
     .main-photo-display-first-album-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
-    padding: 16px;
-    background-color: rgb(212, 208, 216);
-    margin-left: auto ;
+    width: 98vw;
+    margin-left: 0 ;
     
     }
 
     .main-photo-display-parent-first-album-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
-    padding: 16px;
-    background-color: rgb(212, 208, 216);
+    
+    margin-left: 0;
     
     }
 
@@ -99,8 +104,46 @@ h3 {
         margin-bottom: 70px;
     }
 
+    
+
 
 }
+
+@media only screen and (max-width: 1200px) and (min-width: 450px) {
+    .album-card {
+        width: 95dvw;
+        margin-left: 0.5vw;
+    }
+
+    .main-photo-display-first-album-container img {
+         width: 94dvw; 
+    }
+
+    .snackbar-button {
+        margin-left: 6dvw;
+    }
+
+    ::ng-deep .btn-show-id {
+        margin-left: 25vw !important;
+
+    }
+    
+    
+}
+
+
+
+    ::ng-deep .btn-show-id {
+        margin-left: 8vw !important;
+        margin-bottom: 28vh;
+
+    }
+
+    .mat-mdc-card-actions {
+        margin-top: -8vh;
+    }
+
+ 
     
     
     
