@@ -1,3 +1,16 @@
+<div class="input-id-and-user-name-parent-container">
+  <div class="user-name-contianer">
+    <mat-form-field class="user-name-form-field">
+      <mat-label class="mat-label-container">Enter your name</mat-label>
+      <input matInput [(ngModel)]="userName" placeholder="Enter your username" value="">
+      <button *ngIf="userName" matSuffix mat-icon-button aria-label="Clear" (click)="userName = ''">
+        <mat-icon class="user-name-box-delete-text-icon" >close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <app-user-name [userName]="userName">
+    </app-user-name>
+  </div>
 <div class="input-album-id-container">
   <form class="form-input-for-search-by-id" (ngSubmit)="onSearchPhotoById()">
     <mat-form-field class="search-for-id-form">
@@ -11,6 +24,7 @@
       Please enter a valid Photo Id (1-5000).
     </div>
     
+</div>
 </div>
 <div class="show-multiple-photos-view-container" *ngIf="!searchByPhotoIdApplied">
   <div class="btn-for-choosing-display">

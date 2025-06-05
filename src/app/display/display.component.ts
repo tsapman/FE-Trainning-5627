@@ -11,11 +11,13 @@ import { FormsModule } from '@angular/forms';
 import { MatFormField, MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { UserNameComponent } from '../user-name/user-name.component';
+
 
 @Component({
   selector: 'app-display',
   standalone: true,
-  imports: [CommonModule,ImagesComponent,TopFooterButtonsComponent,DisplayfirstTwoAlbumsComponent, MatIcon, FormsModule, MatLabel,MatFormFieldModule,MatInputModule,MatIconModule,MatButtonModule],
+  imports: [CommonModule,ImagesComponent,TopFooterButtonsComponent,DisplayfirstTwoAlbumsComponent, MatIcon, FormsModule, MatLabel,MatFormFieldModule,MatInputModule,MatIconModule,MatButtonModule, UserNameComponent,FormsModule, MatFormFieldModule, MatInputModule],
   templateUrl: './display.component.html',
   styleUrls: ['./display.component.scss'],
 })
@@ -27,6 +29,7 @@ export class DisplayComponent implements OnInit {
   public value: string = 'Search photo by Id';
   public searchPhotoId : number = 0;
   public searchByPhotoIdApplied: boolean = false;
+  public userName: string = '';
 
   constructor(private data_service: DataService, private snackBar : MatSnackBar ) {}
 
